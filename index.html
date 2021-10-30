@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DFA</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            background-color: #F9F3DF;
+            color: #610094;
+            /* color: white; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        fieldset {
+            border-color: violet;
+            outline-color: #610094;
+            margin-left: 250px;
+            border-style: dashed;
+            padding: 10px;
+        }
+        legend {
+            font-size: 30px;
+        }
+        img {
+            margin-top: 5px;
+            width: 30%;
+            margin-bottom: 40px;
+        }
+        .hide-img {
+            display: none;
+        }
+        fieldset+h3 {
+            text-decoration: underline;
+        }
+        .btn {
+            background-color: white;
+            color: #610094;
+            /* color: white; */
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .btn:hover {
+            background-color: white;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!--Include the DFA Image -->
+    <fieldset style="width: 60%;">
+        <legend>USER INPUT</legend>
+        <h1>DFA - Assignment </h1>
+        <div>
+            <h2>Construct DFA for the the language of strings over Σ ={ a, b }<br> of the
+                form a<sup>n</sup> b <sup>m</sup> | n,m>=1.</h2>
+        </div>
+        <br>
+        <form action="/" method="POST">
+            <label for="dfa_input" style="font-size: 20px">ENTER THE STRING : </label>
+            <input type="text" style="color: #610094;font-size: 15px;background-color: #F9F3DF;border-style: groove;"
+                name="dfa"><br><br>
+
+            <button class="btn" type="submit">CLICK HERE TO CHECK</button>
+        </form>
+    </fieldset>
+    <h3>TRANSITION FUNCTION <span>(&delta;)</span>&nbsp;&nbsp;&nbsp;&nbsp; ---->(Click Me to see it)</h3>
+    <img src="DFA2.png" class="hide-img" alt="Transition_Func">
+    <script>
+        var myVar = (document.querySelector("h3"));
+        myVar.addEventListener("click", function () { document.querySelector("img").classList.toggle("hide-img") });
+    </script>
+</body>
+
+</html>
